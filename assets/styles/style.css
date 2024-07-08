@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+h2, h3, h3, h4 {
+  color: #230338;
+}
+
+h2 {
+  text-align: center;
+} 
+
+nav {
+  background-color: #230338;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+
+nav a:hover {
+  opacity: 0.2;
+}
+
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+.lambang header {
+  text-align: center;
+}
+
+.featured-image, .wayang-image {
+  width: 100%;
+  max-height: 370px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.wayang-image {
+  object-position: top;
+}
+
+.profile img{
+  max-width: 200px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.jumbotron {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.jumbotron img {
+  width: 100%;
+}
+
+.jumbotron-text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.jumbotron-text:hover{
+  opacity: 1;
+}
+
+.jumbotron-text h1{
+  font-size: 45px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.jumbotron-text p{
+  font-size: 19px;
+  color: white;
+}
+
+.jumbotron-text > *{
+  transform: translateY(25px);
+  transition: transform 0.6s;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  gap: 1.5rem;
+  background-color: #EEEEEE;
+}
+
+#content {
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+aside {
+  flex: 1;
+}
+
+header {
+  display: inline;
+}
+
+footer {
+  padding: 8px;
+  color: white;
+  background-color: #230338;
+  text-align: center;
+  font-weight: bold;
+}
+
+aside img {
+  width: 200px;
+}
+
+
+.batik-image, .tari-image, .makanan-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+aside ol {
+  padding-left: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+  .jumbotron-text h1{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  .jumbotron-text p{
+    opacity: 0;
+  }
+
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .container-card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  main aside {
+    align-self: stretch;
+  }
+}
